@@ -3,7 +3,10 @@ const app=express();
 const db=require('./db');
 const bodyParser=require('body-parser');
 app.use(bodyParser.json());
+require('dotenv').config();
 const Person=require('./models/person');
+const PORT= process.env.PORT || 3001;
+
 
 app.get('/',(req,res)=>{
     res.send(
@@ -19,7 +22,7 @@ const MenuRouter=require('./routes/menuitems');
 app.use('/menu',MenuRouter);
 
 
-const PORT=3001;
+
 app.listen(PORT,()=>{
     console.log(` server is running on http://localhost:${PORT}`);
 })
