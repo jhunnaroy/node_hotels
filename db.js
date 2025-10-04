@@ -10,10 +10,10 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 //  const mongoDB_URL = process.env.mongoDB_URL;
-const ONLINE_URL = process.env.ONLINE_URL;
+const Global_URL = process.env.Glbal_URL;
 
 // MongoDB connection
-mongoose.connect(ONLINE_URL, {
+mongoose.connect(Global_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
